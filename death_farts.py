@@ -34,7 +34,6 @@ FART_IMGS = [pygame.image.load(os.path.join("imgs", "cloud_2.png")),
              pygame.image.load(os.path.join("imgs", "GreenCloudS.png"))]
 
 
-gen = 0  # Initialize the generation counter
 DRAW_LINES = True
 
 class Death:
