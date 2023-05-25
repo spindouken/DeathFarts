@@ -303,48 +303,6 @@ class Background:
         win.blit(self.BG_IMG, (self.x1, 0))
         win.blit(self.BG_IMG, (self.x2, 0))
 
-def draw_window(win, deaths, obstacles, base, background, score, gen, obstacle_ind, draw_lines=True, show_labels=True):
-    """
-    draws the windows for the main game loop
-    :param win: pygame window surface
-    :param death: a Death object
-    :param obstacles: List of obstacles
-    :param score: score of the game (int)
-    :param gen: current generation
-    :param obstacle_ind: index of closest obstacle
-    :return: None
-    """
-    if gen == 0:
-        gen = 1
-
-    background.draw(win)  # Draw the scrolling background
-
-    for obstacle in obstacles:
-        obstacle.draw(win)
-
-    base.draw(win)
-    for death in deaths:
-        death.draw(win)
-        death.draw_farts(win)
-        if draw_lines:
-            try:
-                pygame.draw.line(win, (191, 31, 24), (death.x+death.img.get_width()/2, death.y + death.img.get_height()/2), (obstacles[obstacle_ind].x + obstacles[obstacle_ind].OBSTACLE_TOP.get_width()/2, obstacles[obstacle_ind].height), 5)
-                pygame.draw.line(win, (191, 31, 24), (death.x+death.img.get_width()/2, death.y + death.img.get_height()/2), (obstacles[obstacle_ind].x + obstacles[obstacle_ind].OBSTACLE_BOTTOM.get_width()/2, obstacles[obstacle_ind].bottom), 5)
-            except:
-                pass
-
-    if show_labels:
-        score_label = STAT_FONT.render("Gens: " + str(gen-1),1,(247, 250, 0))
-        win.blit(score_label, (10, 10))
-
-        score_label = STAT_FONT.render("Alive: " + str(len(deaths)),1,(247, 250, 0))
-        win.blit(score_label, (10, 50))
-
-    score_label = STAT_FONT.render("Score: " + str(score),1,(247, 250, 0))
-    win.blit(score_label, (WIN_WIDTH - score_label.get_width() - 15, 10))
-
-    pygame.display.update()
-
 def get_current_stage(score):
     # edit x in score // x to change when stage shifts (background & obstacles)
     return (score // 14) % 3 + 1
