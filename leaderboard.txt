@@ -1,0 +1,7 @@
+Betty:9001
+Ada:8750
+Chris:386
+Julia:264
+Mason:117
+:0
+fdafds:0
