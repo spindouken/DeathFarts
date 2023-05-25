@@ -39,12 +39,8 @@ WONDER NO MORE! Death Farts is here to quell all those curiosities!
 
 
 ## :white_check_mark: Requirements :white_check_mark:
-* pygame
-* numpy
-* neat-python
-* graphviz
-* matplotlib
-
+* python
+* pygame (pip install pygame)
 
 ## :cd: Installation :cd:
 * Clone the repository: `git clone https://github.com/Julia-5534/DF.git`
