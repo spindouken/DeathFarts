@@ -45,7 +45,7 @@ WONDER NO MORE! Death Farts is here to quell all those curiosities!
 ## :cd: Installation :cd:
 * Clone the repository: `git clone https://github.com/Julia-5534/DF.git`
 * Access the Death Farts directory: `cd DF`
-* Run Death Farts: `python3 dftest.py`
+* Run Death Farts: `python3 death_farts.py`
   
 
 ## :video_game: Controls :video_game:
